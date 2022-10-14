@@ -1,0 +1,361 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.exo1 {
+  background-color: burlywood;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exo1-button {
+  background-color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  transition: all 0.2s linear;
+}
+.exo1-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 2px 2px #000000;
+}
+
+.exo2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: forestgreen;
+  padding: 0 100px;
+}
+.exo2-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all 0.5s linear;
+}
+.exo2-div-radio {
+  border-radius: 50%;
+  border: white 3px solid;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.exo2-div-radio:hover {
+  background-color: rgba(7, 30, 7, 0.5);
+}
+.exo2-div-radio:hover ~ label > span {
+  z-index: 2;
+}
+.exo2-div-radio:hover ~ label {
+  color: white;
+}
+.exo2-div-radio:checked {
+  background-color: white;
+  z-index: 0;
+}
+.exo2-div-radio:checked ~ label {
+  color: forestgreen;
+  z-index: 1;
+}
+.exo2-div label {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 2rem;
+}
+
+.exo3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+}
+.exo3-input {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 1;
+}
+.exo3-input:hover {
+  cursor: pointer;
+}
+.exo3-input:checked + .exo3-three .line1 {
+  margin-top: 15px;
+  transform: rotate(405deg);
+}
+.exo3-input:checked + .exo3-three .line2 {
+  background: rgba(255, 255, 255, 0);
+}
+.exo3-input:checked + .exo3-three .line3 {
+  margin-top: 15px;
+  transform: rotate(-405deg);
+}
+.exo3-three {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 50px;
+  height: 40px;
+}
+.exo3-three-line {
+  background-color: purple;
+  position: absolute;
+  height: 5px;
+  width: 50px;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+  top: 0px;
+}
+
+.line2 {
+  margin-top: 15px;
+}
+
+.line3 {
+  margin-top: 30px;
+}
+
+.exo4 {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  justify-content: start;
+  align-items: center;
+}
+.exo4-div {
+  height: 600px;
+  transition: all 0.5s linear;
+  flex-shrink: 3;
+  flex-grow: 1;
+}
+.exo4-div:hover {
+  flex-grow: 2;
+}
+.exo4-1 {
+  background-color: red;
+}
+.exo4-2 {
+  background-color: yellow;
+}
+
+.exo5 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 200px;
+  background-color: purple;
+  padding: 10px 15px;
+}
+.exo5-text {
+  font-size: 1.5rem;
+  position: relative;
+  background-color: red;
+}
+.exo5-text:hover .exo5-data {
+  display: flex;
+}
+.exo5-data {
+  position: absolute;
+  bottom: 100%;
+  display: none;
+  background-color: blue;
+}
+
+.exo6 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-animation: changeColor 5s linear infinite;
+          animation: changeColor 5s linear infinite;
+}
+@-webkit-keyframes changeColor {
+  from, 10% {
+    background-color: red;
+  }
+  20%, 40% {
+    background-color: yellow;
+  }
+  60%, 80% {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+@keyframes changeColor {
+  from, 10% {
+    background-color: red;
+  }
+  20%, 40% {
+    background-color: yellow;
+  }
+  60%, 80% {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+.exo7 {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: blue;
+  border-radius: 15px;
+}
+.exo7-sun {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.exo7-cloud {
+  position: absolute;
+  -webkit-animation: moveSun 10s linear;
+          animation: moveSun 10s linear;
+}
+.exo7 .cloud1 {
+  top: 50px;
+  right: 200px;
+  -webkit-animation: moveCloud 7s linear;
+          animation: moveCloud 7s linear;
+}
+.exo7 .cloud2 {
+  top: 50px;
+  right: 250px;
+  -webkit-animation: moveCloud 5s linear;
+          animation: moveCloud 5s linear;
+}
+@-webkit-keyframes moveSun {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+@keyframes moveSun {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+@-webkit-keyframes moveCloud {}
+@keyframes moveCloud {}
+
+.exo8 {
+  width: 300px;
+  height: 21px;
+  line-height: 21px;
+  background-color: bisque;
+  font-size: larger;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.exo8-textList {
+  height: 21px;
+  margin-left: 5px;
+  position: relative;
+}
+.exo8-textList-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  bottom: 0;
+  gap: 17px;
+  -webkit-animation: fallingLetter 10s linear infinite;
+          animation: fallingLetter 10s linear infinite;
+}
+@-webkit-keyframes fallingLetter {
+  from {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(38px);
+  }
+  60% {
+    transform: translateY(38px);
+  }
+  80% {
+    transform: translateY(76px);
+  }
+  90% {
+    transform: translateY(76px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes fallingLetter {
+  from {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(38px);
+  }
+  60% {
+    transform: translateY(38px);
+  }
+  80% {
+    transform: translateY(76px);
+  }
+  90% {
+    transform: translateY(76px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.exo8-textList-wrapper > div {
+  height: 21px;
+}/*# sourceMappingURL=style.css.map */
